@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+
+
+        /*
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', () => {
+            console.log('18a:', xhr.response);
+        });
+        xhr.open('GET', 'https://supersimplebackend.dev/greeting');
+        xhr.send();
+        */
+
+
+        /*
+        fetch(
+            'https://supersimplebackend.dev/greeting'
+        ).then((response) => {
+            return response.text();
+
+        }).then((text) => {
+            console.log('18b:', text)
+        });
+        */
+
+
+        /*
+        async function getGreeting() {
+            const response = await fetch('https://supersimplebackend.dev/greeting');
+            const text = await response.text();
+            console.log('18c', text);
+        };
+        getGreeting();
+        */
+
+
+        /*
+        async function postGreeting() {
+            const response = await fetch('https://supersimplebackend.dev/greeting', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: 'Anas Raza'
+                })
+            });
+
+            const text = await response.text();
+            console.log('18d:', text);
+        };
+        postGreeting();
+        */
+
+
+        /*
+        fetch('https://amazon.com')
+
+            .then((response) => {
+                return response.text();
+
+            }).then((text) => {
+                console.log(text)
+            })
+            .catch((error) => {
+                console.log('18f: CORS error. Your request was blocked by the backend');
+            })
+
+            // OR (using Async Await)
+
+            async function getAmazon() {
+                try {
+                const response = await fetch('https://amazon.com');
+                const text = await response.text();
+                console.log(text);
+                
+            } catch (error) {
+                console.log('18f: CORS error. Your request was blocked by the backend');
+            };
+        };
+        getAmazon();
+        // */
+
+        /*
+        fetch('https://supersimplebackend.dev/greeting', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+
+        }).then((response) => {
+            if (response.status >= 400) {
+                return Promise.reject(response);
+            };
+
+            return response.text();
+
+        }).then((text) => {
+            console.log(text);
+
+        }).catch((error) => {
+            if (error.status === 400) {
+                error.json().then((errorMessage) => {
+                    console.log(errorMessage)
+                });
+            } else {
+                console.log('Network error. Please try again later')
+            }
+        })
+        */
+    </script>
+</body>
+
+</html>
